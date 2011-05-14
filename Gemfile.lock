@@ -2,6 +2,7 @@ GEM
   remote: http://rubygems.org/
   specs:
     columnize (0.3.2)
+    eventmachine (0.12.10)
     linecache (0.43)
     rb-appscript (0.6.1)
     ruby-debug (0.10.4)
@@ -9,10 +10,15 @@ GEM
       ruby-debug-base (~> 0.10.4.0)
     ruby-debug-base (0.10.4)
       linecache (>= 0.3)
+    sqlite3 (1.3.3)
+    sqlite3-ruby (1.3.3)
+      sqlite3 (>= 1.3.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  eventmachine
   rb-appscript
   ruby-debug
+  sqlite3-ruby
