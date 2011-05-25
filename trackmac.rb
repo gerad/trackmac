@@ -25,7 +25,7 @@ class TrackMac
       if @now - last > 5 # asleep
         ['asleep', last]
       elsif idle > 5 * 60 # idle
-        ['idle', [@now - idle, 0].max]
+        ['idle', @now - idle]
       else
         [current_activity, @now]
       end
