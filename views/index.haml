@@ -1,0 +1,10 @@
+%h1 Events for #{@events.first.start.strftime('%a %m/%d')}
+
+- @events.all.group_by{ |e| e.hour }.each do |hour, hour_events|
+  %h2 #{hour}:00
+  %table
+    - hour_events.each do |event|
+      %tr
+        %td= event.minute
+        %td{ 'data-seconds' => event.seconds }= sprintf("%.1f", event.seconds) + 's'
+        %td= event.activity

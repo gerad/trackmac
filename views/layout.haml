@@ -1,0 +1,11 @@
+!!! 5
+%html
+  %head
+    %title
+      - if (title = yield_content(:title))
+        = title
+        -
+      Track Mac
+  %body
+    = yield
+    = yield_content(:javascript)
